@@ -13,11 +13,11 @@ export default function Home() {
       content = (
         <>
           <p className="py-6">
-            Upload your provided PDF Diploma below. We will calculate the hash of the PDF and retrieve the metadata through our smart contract. We'll use the URL provided in the metadata to obtain the current public key and verify the signature.
+            Upload your provided PDF Diploma below. We will calculate the hash of the PDF and retrieve the metadata through our smart contract. We&apos;ll use the URL provided in the metadata to obtain the current public key and verify the signature.
           </p>
           <input type="file" className="file-input file-input-bordered w-full max-w-xs"
             onChangeCapture={(event) => {
-              setFileName(event.target.files[0].name)
+              setFileName((event.target as HTMLInputElement).files?.[0].name || '')
               setCurrentStep(1);
             }} />
         </>
@@ -47,7 +47,7 @@ export default function Home() {
       content = (
         <>
           <p className="py-6">
-            Querying smart contract with 'getCertificate' function.
+            Querying smart contract with &apos;getCertificate&apos; function.
           </p>
           <span className="loading loading-spinner loading-lg"></span>
         </>
@@ -134,7 +134,7 @@ export default function Home() {
         }
       //Check file name.
     }
-  }, [currentStep])
+  }, [currentStep, fileName])
 
   return (
     <div className="hero bg-base-200 min-h-screen">
