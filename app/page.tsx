@@ -105,7 +105,7 @@ export default function Home() {
           <p className="flex items-center justify-center">
             <CircleX size={45} color={"#cc0000"} />
           </p>
-          <button className="btn btn-primary mt-8" onClick={() => setCurrentStep(0)} >Return to hom</button>
+          <button className="btn btn-primary mt-8" onClick={() => setCurrentStep(0)} >Return to home</button>
         </>
       )
       break;
